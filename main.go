@@ -201,7 +201,10 @@ func main() {
 		contactContainer,
 	)
 
-	w.SetContent(content)
+	// make the content scrollable
+	scrollContainer := container.NewScroll(content)
+
+	w.SetContent(scrollContainer)
 	w.ShowAndRun()
 }
 
